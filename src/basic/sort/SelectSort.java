@@ -11,11 +11,10 @@ package basic.sort;
 public class SelectSort {
 
     public static void main(String[] args) {
-
-        int[] a = {3, 4, 6, 1, 4, 6, 0, 8, 7, 8};
-        print(a);
+        int[] a = SortUtils.defaultArr();
+        SortUtils.print(a);
         selectSort(a);
-        print(a);
+        SortUtils.print(a);
     }
 
     public static void selectSort(int[] arr) {
@@ -27,20 +26,8 @@ public class SelectSort {
             for (int j = i + 1; j < arr.length; j++) {
                 minValueIndex = arr[j] < arr[minValueIndex] ? j : minValueIndex;
             }
-            swap(arr, i, minValueIndex);
+            SortUtils.swap(arr, i, minValueIndex);
         }
     }
 
-    public static void swap(int[] arr, int i, int j) {
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-    }
-
-    public static void print(int[] arr) {
-        for (int a : arr) {
-            System.out.print(a + " ");
-        }
-        System.out.println();
-    }
 }
