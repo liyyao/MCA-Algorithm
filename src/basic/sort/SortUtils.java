@@ -1,5 +1,7 @@
 package basic.sort;
 
+import basic.util.ArrayUtil;
+
 public class SortUtils {
 
     public static void swap(int[] arr, int i, int j) {
@@ -16,6 +18,8 @@ public class SortUtils {
     }
 
     public static int[] defaultArr() {
-        return new int[]{3, 4, 6, 1, 4, 6, 0, 8, 7, 8};
+        int maxLen = 50;
+        int maxValue = 1000;
+        return ArrayUtil.LenRandomValueRandom(maxLen, maxValue);
     }
 }
