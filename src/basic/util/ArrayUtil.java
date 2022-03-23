@@ -3,7 +3,19 @@ package basic.util;
 public class ArrayUtil {
 
     /**
+     * 打印数组
+     * @param arr
+     */
+    public static void print(int[] arr) {
+        for (int a : arr) {
+            System.out.print(a + " ");
+        }
+        System.out.println();
+    }
+
+    /**
      * 判断数组是否是升序
+     *
      * @param arr
      * @return
      */
@@ -20,6 +32,7 @@ public class ArrayUtil {
 
     /**
      * copy一个数组
+     *
      * @param arr
      * @return
      */
@@ -33,7 +46,8 @@ public class ArrayUtil {
 
     /**
      * 生成一个随机数组
-     * @param maxLen 数组最大长度
+     *
+     * @param maxLen   数组最大长度
      * @param maxValue 数组中最大值
      * @return int数组
      */
@@ -44,5 +58,26 @@ public class ArrayUtil {
             ans[i] = (int) (Math.random() * maxValue);
         }
         return ans;
+    }
+
+    /**
+     * 生成一个随机数组
+     * 数组中相邻的两个数不相等
+     * @param maxLen   数组最大长度
+     * @param maxValue 数组中最大值
+     * @return int数组
+     */
+    public static int[] randomArr(int maxLen, int maxValue) {
+        int len = (int) (Math.random() * maxLen);
+        int[] arr = new int[len];
+        if (len > 0) {
+            arr[0] = (int) (Math.random() * maxValue);
+        }
+        for (int i = 1; i < len; i++) {
+            do {
+                arr[i] = (int)(Math.random() * maxValue);
+            } while (arr[i] == arr[i - 1]);
+        }
+        return arr;
     }
 }

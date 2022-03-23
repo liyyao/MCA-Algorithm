@@ -1,5 +1,7 @@
 package basic.sort;
 
+import basic.util.ArrayUtil;
+
 /**
  * 冒泡排序
  * 在0 ~ N-1之间两两交换，将最大（最小）的放到N-1位置
@@ -11,9 +13,9 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         int[] arr = SortUtils.defaultArr();
-        SortUtils.print(arr);
+        ArrayUtil.print(arr);
         bubbleSort(arr);
-        SortUtils.print(arr);
+        ArrayUtil.print(arr);
     }
 
     public static void bubbleSort(int[] arr) {

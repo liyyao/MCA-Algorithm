@@ -1,5 +1,7 @@
 package basic.sort;
 
+import basic.util.ArrayUtil;
+
 /**
  * 选择排序
  * 某个区间查出最小的排放在前面
@@ -12,9 +14,9 @@ public class SelectSort {
 
     public static void main(String[] args) {
         int[] a = SortUtils.defaultArr();
-        SortUtils.print(a);
+        ArrayUtil.print(a);
         selectSort(a);
-        SortUtils.print(a);
+        ArrayUtil.print(a);
     }
 
     public static void selectSort(int[] arr) {

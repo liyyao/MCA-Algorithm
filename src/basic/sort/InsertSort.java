@@ -1,5 +1,7 @@
 package basic.sort;
 
+import basic.util.ArrayUtil;
+
 /**
  * 插入排序
  * 保证当前位置前面的数都已排好序，就像打扑克一样插入排序
@@ -13,13 +15,13 @@ public class InsertSort {
 
     public static void main(String[] args) {
         int[] arr = SortUtils.defaultArr();
-        SortUtils.print(arr);
+        ArrayUtil.print(arr);
         //insertSort(arr);
         insertSort2(arr);
-        SortUtils.print(arr);
+        ArrayUtil.print(arr);
     }
 
-    private static void insertSort(int[] arr) {
+    public static void insertSort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int j = i;
             while (j > 0 && arr[j] < arr[j - 1]) {

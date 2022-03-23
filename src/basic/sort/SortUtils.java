@@ -10,13 +10,6 @@ public class SortUtils {
         arr[j] = temp;
     }
 
-    public static void print(int[] arr) {
-        for (int a : arr) {
-            System.out.print(a + " ");
-        }
-        System.out.println();
-    }
-
     public static int[] defaultArr() {
         int maxLen = 50;
         int maxValue = 1000;
