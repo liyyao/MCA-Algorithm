@@ -40,7 +40,8 @@ public class BinarySearch {
         int L = 0;
         int R = arr.length - 1;
         while (L <= R) {
-            int mind = (L + R) / 2;
+            int mind = L + ((R - L) >> 1);
+            //int mind = (L + R) / 2;     //不安全 可能会溢出
             if (arr[mind] == num) {
                 return true;
             } else if (arr[mind] > num) {
