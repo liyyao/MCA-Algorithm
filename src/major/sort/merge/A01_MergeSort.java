@@ -5,7 +5,7 @@ import tool.ArrayUtil;
 /**
  * 归并排序
  */
-public class MergeSort {
+public class A01_MergeSort {
 
     public static void mergeSort2(int[] arr) {
         if (arr == null || arr.length < 2) {

@@ -11,7 +11,7 @@ import tool.ArrayUtil;
  *    8前面比它小的数是4和6 所以是10
  *    ...
  */
-public class SmallSum {
+public class A02_SmallSum {
 
     public static void main(String[] args) {
 
