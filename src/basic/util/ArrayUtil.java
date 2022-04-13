@@ -37,6 +37,13 @@ public class ArrayUtil {
         System.out.println();
     }
 
+    public static void print(long[] arr) {
+        for (long a : arr) {
+            System.out.print(a + " ");
+        }
+        System.out.println();
+    }
+
     /**
      * 判断数组是否是升序
      *
