@@ -1,6 +1,6 @@
 package major.sort.merge;
 
-import tool.ArrayUtil;
+import tool.ArrayUtils;
 
 /**
  * 归并排序
@@ -78,8 +78,8 @@ public class A01_MergeSort {
         int value = 1000;
         System.out.println("测试开始");
         for (int i = 0; i < testTime; i++) {
-            int[] arr1 = ArrayUtil.LenRandomValueRandom(len, value);
-            int[] arr2 = ArrayUtil.copyArray(arr1);
+            int[] arr1 = ArrayUtils.LenRandomValueRandom(len, value);
+            int[] arr2 = ArrayUtils.copyArray(arr1);
             mergeSort1(arr1);
             mergeSort2(arr2);
             for (int j = 0; j < arr1.length; j++) {

@@ -1,7 +1,6 @@
 package basic.sort;
 
 import basic.util.ArrayUtil;
-import org.w3c.dom.ranges.Range;
 
 import java.util.Stack;
 

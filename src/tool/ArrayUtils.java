@@ -1,6 +1,8 @@
 package tool;
 
-public class ArrayUtil {
+import java.util.Arrays;
+
+public class ArrayUtils {
 
     /**
      * 判断两个数组是否相等
@@ -91,7 +93,7 @@ public class ArrayUtil {
      * @param maxValue 数组中最大值
      * @return int数组
      */
-    public static int[] randomArr(int maxLen, int maxValue) {
+    public static int[] randomArrAndLeftNotEqualsRight(int maxLen, int maxValue) {
         int len = (int) (Math.random() * maxLen);
         int[] arr = new int[len];
         if (len > 0) {
@@ -101,6 +103,36 @@ public class ArrayUtil {
             do {
                 arr[i] = (int)(Math.random() * maxValue);
             } while (arr[i] == arr[i - 1]);
+        }
+        return arr;
+    }
+
+    /**
+     * 生成一个随机数组，排好序后数组中的每个数移动的距离不超过K
+     * @param maxSize
+     * @param maxValue
+     * @param K
+     * @return
+     */
+    public static int[] randomArrayNoMoveMoreK(int maxSize, int maxValue, int K) {
+        int[] arr = new int[(int) (Math.random() * (maxSize + 1))];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = (int) (((maxValue + 1) * Math.random())) - (int) (((maxValue) * Math.random()));
+        }
+        Arrays.sort(arr);
+        //开始随意交换，但是保证每个数的距离不超过k
+        //swap[i] == true, 表示i位置已经参与过交换
+        //swap[i] == false, 表示 i位置没有参与过交换
+        boolean[] isSwap = new boolean[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            int j = Math.min(i + (int) (Math.random() * (K + 1)), arr.length - 1);
+            if (!isSwap[i] && !isSwap[j]) {
+                isSwap[i] = true;
+                isSwap[j] = true;
+                int tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
         }
         return arr;
     }

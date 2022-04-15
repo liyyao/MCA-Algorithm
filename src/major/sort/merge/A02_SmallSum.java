@@ -1,6 +1,6 @@
 package major.sort.merge;
 
-import tool.ArrayUtil;
+import tool.ArrayUtils;
 
 /**
  * 求最小和，给定一个数组，每一个数前面比他小的数相加，最终将这些和相加
@@ -21,7 +21,7 @@ public class A02_SmallSum {
 
         System.out.println("测试开始");
         for (int i = 0; i < testTime; i++) {
-            int[] arr = ArrayUtil.LenRandomValueRandom(len, value);
+            int[] arr = ArrayUtils.LenRandomValueRandom(len, value);
             int test = test(arr);
             int ans = smallSum(arr);
             if (test != ans) {
