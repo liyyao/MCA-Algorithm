@@ -39,6 +39,19 @@ public class ArrayUtils {
         System.out.println();
     }
 
+    public static void print(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("(");
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(arr[i][j]);
+                if (j != arr[i].length -1) {
+                    System.out.print(",");
+                }
+            }
+            System.out.println(")");
+        }
+    }
+
     /**
      * 判断数组是否是升序
      *
@@ -133,6 +146,23 @@ public class ArrayUtils {
                 arr[i] = arr[j];
                 arr[j] = tmp;
             }
+        }
+        return arr;
+    }
+
+    /**
+     * 随机生成一个坐标，其中坐标值都为正数且y坐标值要大于x坐标值
+     * @param maxSize
+     * @param maxValue
+     * @return
+     */
+    public static int[][] randomArrayPositiveCoordinate(int maxSize, int maxValue) {
+        int[][] arr = new int[(int) ((maxSize + 1) * Math.random())][2];
+        for (int i = 0; i < arr.length; i++) {
+            int x = (int) (maxValue * Math.random());
+            int y = (int) ((maxValue - x) * Math.random() + 1 + x);
+            arr[i][0] = x;
+            arr[i][1] = y;
         }
         return arr;
     }
