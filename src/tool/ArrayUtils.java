@@ -39,6 +39,13 @@ public class ArrayUtils {
         System.out.println();
     }
 
+    public static void print(String[] arr) {
+        for (String a : arr) {
+            System.out.print(a + " ");
+        }
+        System.out.println();
+    }
+
     public static void print(int[][] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print("(");
