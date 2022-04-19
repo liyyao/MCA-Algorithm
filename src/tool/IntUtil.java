@@ -10,4 +10,8 @@ public class IntUtil {
     public static int randomNumber(int range) {
         return ((int) ((Math.random() * range) + 1)) - ((int) ((Math.random() * range) + 1));
     }
+
+    public static int randomPositiveNumber(int range) {
+        return ((int) (Math.random() * range) + 1);
+    }
 }
