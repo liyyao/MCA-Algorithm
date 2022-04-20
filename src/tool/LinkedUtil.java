@@ -60,6 +60,30 @@ public class LinkedUtil {
     }
 
     /**
+     * 生成偶数长度的单链表
+     * @param len
+     * @param value
+     * @return
+     */
+    public static Node generateEvenSizeRandomLinkedList(int len, int value) {
+        int size = (int) (Math.random() * (len + 1));
+        size = size % 2 == 0 ? size : size - 1;
+        if (size == 0) {
+            return null;
+        }
+        size--;
+        Node head = new Node((int) (Math.random() * (value + 1)));
+        Node pre = head;
+        while (size != 0) {
+            Node cur = new Node((int) (Math.random() * (value + 1)));
+            pre.next = cur;
+            pre = cur;
+            size--;
+        }
+        return head;
+    }
+
+    /**
      * 生成回文单链表
      * @param len
      * @param value

@@ -82,7 +82,7 @@ public class T03_LinkedPartition {
         Node equalsHead = null;
         Node big = null;
         Node bigHead = null;
-        Node temp;
+        Node next;
         while (head != null) {
             if (head.val < k) {
                 if (small == null) {
@@ -109,9 +109,9 @@ public class T03_LinkedPartition {
                     big = big.next;
                 }
             }
-            temp = head;
+            next = head;
             head = head.next;
-            temp.next = null;
+            next.next = null;
         }
         Node tail;
         if (smallHead != null) {
