@@ -3,7 +3,6 @@ package major.linked.questions;
 import common.Node;
 import tool.LinkedUtil;
 
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 
