@@ -7,6 +7,19 @@ import java.util.Queue;
 
 public class TreeUtil {
 
+    public static TreeNode generateRandomBST(int maxLevel, int maxValue) {
+        return generate(1, maxLevel, maxValue);
+    }
+    private static TreeNode generate(int level, int maxLevel, int maxValue) {
+        if (level > maxLevel || Math.random() < 0.5) {
+            return null;
+        }
+        TreeNode head = new TreeNode((int) (Math.random() * maxValue));
+        head.left = generate(level + 1, maxLevel, maxValue);
+        head.right = generate(level + 1, maxLevel, maxValue);
+        return head;
+    }
+
     public static TreeNode generateTree(Integer[] arr) {
         if (arr.length == 0 || arr[0] == null) {
             return null;
@@ -73,4 +86,25 @@ public class TreeUtil {
         System.out.print(head.val + "->");
     }
 
+    /**
+     * 按层遍历
+     * @param root
+     */
+    public static void level(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.print(node.val + "->");
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+        }
+    }
 }
