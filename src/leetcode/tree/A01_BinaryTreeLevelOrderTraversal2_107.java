@@ -5,7 +5,7 @@ import leetcode.util.TreeUtil;
 
 import java.util.*;
 
-public class BinaryTreeLevelOrderTraversal2_107 {
+public class A01_BinaryTreeLevelOrderTraversal2_107 {
 
     public static void main(String[] args) {
         //Integer[] arr = new Integer[] {3,9,20,null,null,15,7};
@@ -17,7 +17,7 @@ public class BinaryTreeLevelOrderTraversal2_107 {
         System.out.println("=====");
         TreeUtil.pos(node);
         System.out.println("=====");
-        BinaryTreeLevelOrderTraversal2_107 tree = new BinaryTreeLevelOrderTraversal2_107();
+        A01_BinaryTreeLevelOrderTraversal2_107 tree = new A01_BinaryTreeLevelOrderTraversal2_107();
         List<List<Integer>> lists = tree.levelOrderBottom2(node);
         System.out.println(lists.toString());
     }

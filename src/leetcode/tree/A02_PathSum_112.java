@@ -2,19 +2,17 @@ package leetcode.tree;
 
 import leetcode.util.TreeUtil;
 
-import java.util.List;
-
 /**
  * https://leetcode.com/problems/path-sum/
  */
-public class PathSum_112 {
+public class A02_PathSum_112 {
 
     public static void main(String[] args) {
         //Integer[] arr = new Integer[] {3,9,20,null,null,15,7};
         //Integer[] arr = new Integer[] {1,2,3,4,null,null,5};
         Integer[] arr = new Integer[] {1,-2,-3,1,3,-2,null,-1};
         TreeNode root = TreeUtil.buildTree(arr);
-        PathSum_112 tree = new PathSum_112();
+        A02_PathSum_112 tree = new A02_PathSum_112();
         boolean ans = tree.hasPathSum(root, -1);
         System.out.println(ans);
     }
