@@ -7,6 +7,12 @@ import java.util.Queue;
 
 public class TreeUtil {
 
+    /**
+     * 随机生成搜索二叉树
+     * @param maxLevel
+     * @param maxValue
+     * @return
+     */
     public static TreeNode generateRandomBST(int maxLevel, int maxValue) {
         return generate(1, maxLevel, maxValue);
     }

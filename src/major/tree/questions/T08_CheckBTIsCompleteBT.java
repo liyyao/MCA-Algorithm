@@ -8,7 +8,7 @@ import java.util.Queue;
 /**
  * 8、判断二叉树是否是完全二叉树
  */
-public class T08_CheckBTIsFullBT {
+public class T08_CheckBTIsCompleteBT {
 
     /**
      * 非递归
