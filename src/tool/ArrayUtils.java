@@ -1,6 +1,7 @@
 package tool;
 
 import java.util.Arrays;
+import java.util.Map;
 
 public class ArrayUtils {
 
@@ -172,5 +173,47 @@ public class ArrayUtils {
             arr[i][1] = y;
         }
         return arr;
+    }
+
+    /**
+     * 随机生成字符串数组
+     * @param arrLen
+     * @param strLen
+     * @return
+     */
+    public static String[] generateRandomStringArray(int arrLen, int strLen) {
+        String[] ans = new String[(int) (Math.random() * arrLen + 1)];
+        for (int i = 0; i < ans.length; i++) {
+            ans[i] = generateRandomString(strLen);
+        }
+        return ans;
+    }
+
+    /**
+     * 随机生成字符串
+     * @param strLen
+     * @return
+     */
+    public static String generateRandomString(int strLen) {
+        char[] ans = new char[(int) (Math.random() * strLen + 1)];
+        for (int i = 0; i < ans.length; i++) {
+            int value = (int) (Math.random() * 26);
+            ans[i] = (Math.random() <= 0.5) ? (char) (65 + value) : (char) (97 + value);
+        }
+        return String.valueOf(ans);
+    }
+
+    public static String[] copyStringArr(String[] arr) {
+        if (arr == null) {
+            return null;
+        }
+        if (arr.length == 0) {
+            return new String[0];
+        }
+        String[] ans = new String[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            ans[i] = String.valueOf(arr[i]);
+        }
+        return ans;
     }
 }
