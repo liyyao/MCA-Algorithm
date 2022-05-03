@@ -1,3 +1,75 @@
 1、https://leetcode.com/problems/number-of-islands/
 岛问题：给定一个二维数组matrix，里面的值不是1就是0，上、下、左、右相邻的1认为是一片岛，返回matrix中岛的数量
 
+2、https://leetcode.com/problems/number-of-provinces/
+There are n cities. Some of them are connected, while some are not. If city a is connected directly with city b, and city b is connected directly with city c, then city a is connected indirectly with city c.
+A province is a group of directly or indirectly connected cities and no other cities outside of the group.
+You are given an n x n matrix isConnected where isConnected[i][j] = 1 if the ith city and the jth city are directly connected, and isConnected[i][j] = 0 otherwise.
+Return the total number of provinces.
+
+Input: isConnected = [[1,1,0],[1,1,0],[0,0,1]]
+Output: 2
+
+Input: isConnected = [[1,0,0],[0,1,0],[0,0,1]]
+Output: 3
+
+Constraints:
+    1 <= n <= 200
+    n == isConnected.length
+    n == isConnected[i].length
+    isConnected[i][j] is 1 or 0.
+    isConnected[i][i] == 1
+    isConnected[i][j] == isConnected[j][i]
+
+
+3、https://leetcode.com/problems/number-of-islands-ii/
+(这是一道付费题)
+ Number of Islands II
+ A 2d grid map of m rows and n columns is initially filled with water. We may perform an addLand operation which turns the
+ water at position (row, col) into a land, Given a list of positions to operate, count the number of islands after each
+ addLand operation. An island is surrounded by water and is formed by connectiong adjacent lands horizontally or vertically.
+ You may assume all four edges of the grid are all surrounded by water.
+
+ Example:
+    Input: m = 3, n = 3, positions = [[0,0], [0,1], [1,2], [2,1]]
+    output: [1, 1, 2, 3]
+ Explanation:
+    Initially, the 2d grid grid is filled with water.(Assume 0 represents water and 1 represents land).
+        0 0 0
+        0 0 0
+        0 0 0
+    Operation #1: addLand(0,0) turns the water at grid[0][0] into a land.
+        1 0 0
+        0 0 0       Number of islands = 1
+        0 0 0
+
+    Operation #2: addLand(0,1) turns the water at grid[0][1] into a land.
+        1 1 0
+        0 0 0       Number of islands = 1
+        0 0 0
+
+    Operation #3: addLand(1,2) turns the water at grid[1][2] into a land.
+        1 1 0
+        0 0 1       Number of islands = 2
+        0 0 0
+
+    Operation #4: addLand(2,1) turns the water at grid[2][1] into a land.
+        1 1 0
+        0 0 1       Number of islands = 3
+        0 1 0
+
+Follow up:
+Can you do it in time Complexity O(k log mn), where k is the length of the positions ?
+
+class Solution {
+    public static List<Integer> numIslands2(int m, int n, int[][] positions) {
+
+    }
+}
+
+
+// 上题目中如果m*n比较大，会经历很重的初始化，而k比较小，怎么优化的方法
+
+
+4、岛问题扩展
+如果matrix极大，设计一种可行的并行计算方案
