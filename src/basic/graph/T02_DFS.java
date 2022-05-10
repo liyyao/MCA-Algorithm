@@ -1,6 +1,5 @@
 package basic.graph;
 
-import common.graph.Graph;
 import common.graph.GraphNode;
 
 import java.util.HashSet;
