@@ -1,10 +1,10 @@
-package basic.graph;
+package major.graph;
 
 import common.graph.Graph;
 import common.graph.GraphEdge;
 import common.graph.GraphNode;
 
-public class GraphGenerator {
+public class T00_GraphGenerator {
 
     /**
      * N * 3的矩阵
