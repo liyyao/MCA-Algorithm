@@ -9,6 +9,11 @@ import java.util.List;
  */
 public class T03_PrintAllPermutations {
 
+    /**
+     * 比较差的递归
+     * @param s
+     * @return
+     */
     public static List<String> permutation1(String s) {
         List<String> ans = new ArrayList<>();
         if (s == null || s.length() == 0) {
@@ -34,7 +39,7 @@ public class T03_PrintAllPermutations {
             char cur = rest.get(i);
             rest.remove(i);
             f(rest, path + cur, ans);
-            rest.add(i, cur);
+            rest.add(i, cur);       //恢复现场
         }
     }
 

@@ -89,7 +89,7 @@ public class T07_PalindromeSubStr {
         int p1 = process2(str, L + 1, R);
         int p2 = process2(str, L, R - 1);
         int p3 = str[L] == str[R] ? 2 + process2(str, L + 1, R - 1) : 0;
-        int p4 = process2(str, L + 1, R - 1);
+        int p4 = process2(str, L + 1, R - 1);       //根据下面动态规划最后得出的结果，这步可以省略
         return Math.max(p1, Math.max(p2, Math.max(p3, p4)));
     }
 

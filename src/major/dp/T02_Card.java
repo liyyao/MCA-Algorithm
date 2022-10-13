@@ -16,6 +16,7 @@ public class T02_Card {
         return Math.max(first, second);
     }
 
+    //先手获得的最好分数返回
     private static int first(int[] arr, int L, int R) {
         if (L == R) {
             return arr[L];
@@ -25,13 +26,14 @@ public class T02_Card {
         return Math.max(ans1, ans2);
     }
 
+    //后手获得的最好分数返回
     private static int second(int[] arr, int L, int R) {
         if (L == R) {
             return 0;
         }
-        int ans1 = first(arr, L + 1, R);
-        int ans2 = first(arr, L, R - 1);
-        return Math.min(ans1, ans2);
+        int ans1 = first(arr, L + 1, R);    //对手拿走了L位置的数
+        int ans2 = first(arr, L, R - 1);    //对手拿走了R位置的数
+        return Math.min(ans1, ans2);           //对手拿完牌后留下的最小的牌，这里需要好好理解
     }
 
     //-----------------------------------

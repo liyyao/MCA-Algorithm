@@ -28,7 +28,7 @@ public class T04_StrConvert {
     }
 
     /**
-     * 从右往右的动态规则
+     * 从右往左的动态规则
      * @param str
      * @return
      */
